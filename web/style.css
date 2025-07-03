@@ -1,53 +1,131 @@
+:root {
+    --primary: #4CAF50;
+    --dark: #222;
+    --light: #fff;
+    --bg: #f5f5f5;
+}
+
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background: var(--bg);
+    color: var(--dark);
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
+a {
+    color: var(--primary);
+}
+
+.navbar {
+    background: var(--primary);
+    color: var(--light);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 1rem;
-    text-align: center;
 }
 
-nav a {
-    color: white;
-    margin: 0 0.5rem;
+.navbar .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav li {
+    margin-left: 1rem;
+}
+
+.navbar nav a {
+    color: var(--light);
     text-decoration: none;
 }
 
-main {
-    padding: 1rem;
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.hero {
+    background: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 4rem 1rem;
 }
 
 section {
-    background-color: #fff;
-    padding: 1rem;
+    background: var(--light);
+    margin: 1rem auto;
+    padding: 2rem 1rem;
+    max-width: 900px;
     border-radius: 4px;
-    margin-bottom: 1rem;
-}
-
-.teacher-profile {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 4px;
-    margin-bottom: 1rem;
 }
 
 .btn {
     display: inline-block;
-    margin: 1rem 0;
-    padding: 0.5rem 1rem;
-    background-color: #4CAF50;
-    color: white;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary);
+    color: var(--light);
     text-decoration: none;
     border-radius: 4px;
 }
 
+.accordion-item {
+    border-top: 1px solid #ddd;
+}
+
+.accordion-header {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #eee;
+    padding: 2rem 1rem;
+    background: #eee;
+}
+
+@media (max-width: 768px) {
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        width: 100%;
+        padding: 1rem;
+    }
+    .navbar nav ul.open {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .navbar nav li {
+        margin: 0.5rem 0;
+    }
 }

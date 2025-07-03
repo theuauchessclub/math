@@ -5,69 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Up And Up Chess Club</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>The Up And Up Chess Club</h1>
-        <p>Transforming minds through chess</p>
+    <header class="navbar">
+        <div class="logo">The Up And Up Chess Club</div>
+        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
         <nav>
-            <a href="#about">About</a>
-            <a href="#founder">Founder</a>
-            <a href="#curriculum">Curriculum</a>
-            <a href="#benefits">Benefits</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#reviews">Reviews</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#founder">Founder</a></li>
+                <li><a href="#curriculum">Curriculum</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>About</h2>
-            <p>The Up And Up Chess Club helps children develop strategic thinking and improve academic performance through structured chess instruction.</p>
-        </section>
+    <section class="hero">
+        <h1>Transform Your Child's Future Through Chess Mastery</h1>
+        <p>Join the proven program that boosts academic performance by 28% and develops critical thinking skills for life success.</p>
+        <a href="#pricing" class="btn">Enroll Today</a>
+    </section>
 
-        <section id="founder" class="teacher-profile">
-            <h2>Meet Truth Hall</h2>
-            <p>Truth Hall is a classroom educator with over 15 years of experience. His award-winning program has transformed the minds of more than 500 students.</p>
-        </section>
+    <section id="about">
+        <h2>About</h2>
+        <p>The Up And Up Chess Club helps children develop strategic thinking and improve academic performance through structured chess instruction.</p>
+    </section>
 
-        <section id="curriculum">
-            <h2>Curriculum Overview</h2>
-            <ol>
-                <li>Foundation &amp; Rules Mastery</li>
-                <li>Basic Strategy Development</li>
-                <li>Advanced Tactics &amp; Strategy</li>
-                <li>Tournament Preparation</li>
-                <li>Leadership Through Chess</li>
-            </ol>
-        </section>
+    <section id="founder">
+        <h2>Meet Truth Hall</h2>
+        <p>Truth Hall brings over 15 years of classroom experience. His award-winning method has helped more than 500 students excel on and off the board.</p>
+    </section>
 
-        <section id="benefits">
-            <h2>Benefits</h2>
-            <ul>
-                <li>Cognitive development and critical thinking</li>
-                <li>Improved focus and academic performance</li>
-                <li>Sportsmanship and social connection</li>
-            </ul>
-        </section>
+    <section id="curriculum" class="accordion">
+        <h2>Your Child's Journey to Chess Mastery</h2>
+        <div class="accordion-item">
+            <button class="accordion-header">1 Foundation &amp; Rules Mastery</button>
+            <div class="accordion-content">
+                <p>Master the fundamentals with engaging lessons and interactive gameplay.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">2 Basic Strategy Development</button>
+            <div class="accordion-content">
+                <p>Learn core strategies that build confidence and sharpen decision making.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">3 Advanced Tactics &amp; Strategy</button>
+            <div class="accordion-content">
+                <p>Dive into combinations, tactics and long-term planning for competitive play.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">4 Tournament Preparation</button>
+            <div class="accordion-content">
+                <p>Gain the mindset and skills to perform in real tournaments.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">5 Leadership Through Chess</button>
+            <div class="accordion-content">
+                <p>Develop character, sportsmanship and leadership on and off the board.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="pricing">
-            <h2>Flexible Pricing Options</h2>
-            <h3>Private Essentials &ndash; 1 Month</h3>
-            <p>$349 (virtual $297)</p>
-            <h3>Private Master Program &ndash; 3 Months</h3>
-            <p>$698 (virtual $593)</p>
-            <h3>Private Elite Champion &ndash; 6 Months</h3>
-            <p>$1,396 (virtual $1,187)</p>
-        </section>
+    <section id="benefits">
+        <h2>Benefits</h2>
+        <ul>
+            <li>Cognitive development and critical thinking</li>
+            <li>Improved focus and academic performance</li>
+            <li>Sportsmanship and social connection</li>
+        </ul>
+    </section>
 
-        <section id="reviews">
-            <h2>Parent Reviews</h2>
-            <p><strong>Sarah Thompson:</strong> "Marcus went from struggling with math to excelling in all subjects."</p>
-            <p><strong>Michael Rodriguez:</strong> "Aisha's focus and concentration improved dramatically."</p>
-            <p><strong>Lisa Chen:</strong> "Jordan now thinks through challenges methodically."</p>
-        </section>
-    </main>
+    <section id="pricing">
+        <h2>Flexible Pricing Options</h2>
+        <h3>Private Essentials &ndash; 1 Month</h3>
+        <p>$349 (virtual $297)</p>
+        <h3>Private Master Program &ndash; 3 Months</h3>
+        <p>$698 (virtual $593)</p>
+        <h3>Private Elite Champion &ndash; 6 Months</h3>
+        <p>$1,396 (virtual $1,187)</p>
+    </section>
+
+    <section id="reviews">
+        <h2>Parent Reviews</h2>
+        <p><strong>Sarah Thompson:</strong> "Marcus went from struggling with math to excelling in all subjects."</p>
+        <p><strong>Michael Rodriguez:</strong> "Aisha's focus and concentration improved dramatically."</p>
+        <p><strong>Lisa Chen:</strong> "Jordan now thinks through challenges methodically."</p>
+    </section>
+
+    <section id="quiz">
+        <h2>Test Your Chess Knowledge</h2>
+        <div id="quiz-container" class="hidden">
+            <div id="question"></div>
+            <div id="choices"></div>
+            <button id="next-btn" class="btn">Next</button>
+        </div>
+        <button id="start-quiz" class="btn">Start Quiz</button>
+    </section>
 
     <footer>
         <p>&copy; 2024 The Up And Up Chess Club</p>
